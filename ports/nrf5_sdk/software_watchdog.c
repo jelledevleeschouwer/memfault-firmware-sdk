@@ -115,6 +115,7 @@
 static const nrfx_rtc_t s_rtc = NRFX_RTC_INSTANCE(2);
 
 static void prv_software_watchdog_timeout(nrfx_rtc_int_type_t int_type) {
+  UNUSED_PARAMETER(int_type);
 #if NRFX_WDT_ENABLED
   nrfx_wdt_feed();
 #endif

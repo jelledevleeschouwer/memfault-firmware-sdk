@@ -59,6 +59,7 @@ static void prv_update_boot_time(void) { }
 #endif /* MEMFAULT_PLATFORM_BOOT_TIMER_CUSTOM */
 
 static void prv_mflt_metric_timer(void *p_context) {
+  UNUSED_PARAMETER(p_context);
   prv_update_boot_time();
 
   // The customer can configure the PRESCALAR off them but by default it's a 24 bit counter running at 32kHz so it
